@@ -1,1 +1,1 @@
-$("#h1").append("<p>JS working</p>")
+$("h1").append("<p>JS working</p>")
