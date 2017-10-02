@@ -1,5 +1,3 @@
-console.log("hello");
-/*
 import { allitems } from './ALLITEMS.js';
 class ItemService {
  // items = ALLSCRIPTS;
