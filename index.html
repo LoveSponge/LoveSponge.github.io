@@ -3,277 +3,87 @@
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Portfolio</title>
- <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="mobile-style.css">
+ <link rel="stylesheet" href="main-style.css">
+ <link rel="stylesheet" href="tablet-style.css">
  <style>
-  body {
-   margin: 0px;
-   padding: 0px;
-  }
-
-  .wrapper {
-   display: grid;
-   grid-template-rows: minmax(auto, auto);
-   grid-template-columns: repeat(1, 1fr);
-  }
-
-  .header {
-   display: flex;
-   width: 100%;
-   grid-row: 1;
-   grid-column: 1;
-   background-color: #EEEEEE;
-  }
-
-  .header p {
-   --btnsColour: white;
-   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-   padding: 10px;
-   transition: .5s ease;
-   text-align: center;
-   margin: 16px 10px;
-   background-color: var(--btnsColour);
-  }
-
-  .header p:hover {
-   --btnsHColour: blue;
-   color: white;
-   background-color: var(--btnsHColour);
-   transition: .5s ease;
-  }
-
-  .intro {
-   --introColour: white;
-   width: 100%;
-   grid-row: 2;
-   grid-column: 1;
-   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-   text-align: center;
-   transition: .5s ease;
-   background-color: var(--introColour);
-  }
-
-  .projects {
-   display: block;
-   width: 100%;
-   grid-row: 4;
-   grid-column: 1;
-  }
-
-  @media (min-width: 768px) {
-   .projects {
-    display: inline-flex;
-    width: 100%;
-    grid-row: 4;
-    grid-column: 1;
-   }
-  }
-
-  .project {
-   position: relative;
-   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-   margin: 5px;
-  }
-
-  .project img {
-   width: 100%;
-   transition: .25s ease;
-
-  }
-
-  .project div {
-   opacity: 0;
-   transition: .25s ease;
-   /* background-color: #01579B; */
-   background-color: black;
-   color: white;
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   top: 0px;
-   left: 0px;
-  }
-
-  .project:hover div {
-   opacity: 0.7;
-  }
-
-  .viewer {
-   width: 100%;
-   /* height: 0; */
-   grid-row: 3;
-   grid-column: 1;
-   background-color: rgba(255, 255, 255, 1);
-   overflow-x: hidden;
-   transition: 0.5s;
-  }
-
-  .viewer iframe {
-   width: 100%;
-   height: 0px;
-   border: none;
-   transition: .5s ease;
-  }
-
-  #colour {}
-
-  #close {}
-
-  #info {}
-
-  #close:hover {
-   background-color: rgb(168, 1, 1);
-   color: white;
-  }
-
-  .footer {
-   width: 100%;
-   grid-row: 5;
-   grid-column: 1;
-   background-color: #EEEEEE;
-  }
-
-  .hidden {
-   display: none;
-  }
-
-  .red {
-   background-color: darkred;
-   color: white;
-  }
-
-  .blue {
-   background-color: darkblue;
-   color: white;
-  }
-
-  .white {
-   background-color: white;
-   color: black;
-  }
-
-  @media (min-width: 1024px) {}
  </style>
 </head>
 
-<body onload="setIntroHeight()">
+<body onload="onloader()">
  <div class="wrapper">
-  <div class="header">
-   <p id="colour" class="white" onclick="changeColour()">Colours</p>
-   <p id="close" class="white hidden" onclick="closeView()">CLOSE VIEWER</p>
-   <p id="info" class="white hidden">info</p>
-
+  <div class="mobile-fab">
+   <span>
+    <p>&plus;</p>
+   </span>
   </div>
-  <div class="intro white">
+  <div class="header">
+   <p class="colour">Colours</p>
+  </div>
+  <div class="intro">
    <h1>Lovesponge.github.io</h1>
-   <h3>This is a neat collection of some of my web design projects</h3>
+   <h3>Welcome to my portfolio</h3>
+   <p>Github</p>
+   <p>Google</p>
+   <p>LinkedIn</p>
+   <p>Phone</p>
+   <p>Email</p>
+   <p>Share</p>
+   <p>Download CV</p>
+   <p>Made possible by Github pages</p>
   </div>
   <div class="projects">
-   <div class="project" onclick="createView('./projects/scheduler/index.html')">
-    <img src="./images/scheduler.png" alt="PH">
-    <div>Click here to see more!</div>
+   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
+    <div class="card-title">
+     <p>Project President</p>
+    </div>
+    <div class="card-iframe">
+     <iframe src="./projects/barack/index.html" scrolling=""></iframe>
+    </div>
+    <div class="card-description">
+     <p>This was created as a showcase of my basic HTML, CSS ability for FreeCodeCamp.org</p>
+    </div>
+    <div class="card-actions">
+     <p>like</p>
+     <p>share</p>
+     <p onclick="view(this)">view</p>
+    </div>
    </div>
-   <div class="project" onclick="createView('./projects/barack/index.html')">
-    <img src="./images/barack.png" alt="PH">
-    <div>Click here to see more!</div>
+   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
+    <div class="card-title">
+     <p>Project Scheduler</p>
+    </div>
+    <div class="card-iframe">
+     <iframe src="./projects/scheduler/index.html" scrolling=""></iframe>
+    </div>
+    <div class="card-description">
+     <p>This was created as a showcase of my basic HTML, CSS ability for FreeCodeCamp.org</p>
+    </div>
+    <div class="card-actions">
+     <p>like</p>
+     <p>share</p>
+     <p onclick="view(this)">view</p>
+    </div>
    </div>
-   <div class="project" onclick="createView('./projects/stars/index.html')">
-    <img src="./images/stars.png" alt="PH">
-    <div>Click here to see more!</div>
+   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
+    <div class="card-title">
+     <p>Project Stars</p>
+    </div>
+    <div class="card-iframe">
+     <iframe src="./projects/stars/index.html" scrolling=""></iframe>
+    </div>
+    <div class="card-description">
+     <p>This was created as a showcase of my basic HTML, CSS ability for FreeCodeCamp.org</p>
+    </div>
+    <div class="card-actions">
+     <p>like</p>
+     <p>share</p>
+     <p onclick="view(this)">view</p>
+    </div>
    </div>
-  </div>
-  <div class="viewer">
-  </div>
-  <div class="footer">
-   <p>click here to download my CV. Hosted using github sites</p>
   </div>
  </div>
- <script type="text/javascript">
-  let wrapper = document.getElementsByClassName("wrapper")[0];
-  let header = document.getElementsByClassName("header")[0];
-  let intro = document.getElementsByClassName("intro")[0];
-  let projects = document.getElementsByClassName("projects")[0];
-  let viewer = document.getElementsByClassName("viewer")[0];
-  let footer = document.getElementsByClassName("footer")[0];
-  let closeBtn = document.getElementById("close");
-  let infoBtn = document.getElementById("info");
-  let colourBtn = document.getElementById("info");
-
-  function setIntroHeight() {
-   intro.style.height = visualViewport.height - header.clientHeight - footer.clientHeight - projects.clientHeight + "px";
-  }
-
-  function toggleStyleChildrenOfElement(element, s, n) {
-   let children = element.children;
-
-   for (child of children) {
-    child.style.s = n;
-   }
-  }
-
-  function showViewer(t) {
-   let iframe = document.createElement("iframe");
-   let dheight = visualViewport.height - header.clientHeight - footer.clientHeight - projects.clientHeight;
-   iframe.setAttribute("src", t);
-   iframe.setAttribute("id", "iframe");
-   // iframe.setAttribute("style", "height: " + 0 + "px");
-   viewer.appendChild(iframe);
-   for (let i = 0; i < dheight; i++) {
-    iframe.setAttribute("style", "height: " + i + "px;");
-   }
-   // iframe.setAttribute("style", "height: " + (visualViewport.height - header.clientHeight - footer.clientHeight - projects.clientHeight) + "px;");
-  }
-
-  function createView(t) {
-   projects.setAttribute("class", "hidden");
-   intro.setAttribute("class", "hidden");
-   closeBtn.setAttribute("class", "white " + changeColour());
-   infoBtn.setAttribute("class", "white" + changeColour());
-   showViewer(t);
-  }
-
-  function closeView() {
-   viewer.getElementsByTagName("iframe")[0].remove();
-   closeBtn.setAttribute("class", "hidden");
-   infoBtn.setAttribute("class", "hidden");
-   intro.setAttribute("class", "intro " + changeColour());
-   projects.setAttribute("class", "projects");
-  }
-
-  let currentColour = "white";
-  function changeColour() {
-   if (currentColour == "red") {
-    console.log(currentColour);
-    currentColour = "blue";
-    return currentColour;
-    // intro.setAttribute("class", "intro red");
-    // colourBtn.setAttribute("class", "red");
-    // closeBtn.setAttribute("class", "hidden red");
-    // infoBtn.setAttribute("class", "hidden red");
-   } else if (currentColour == "blue") {
-    console.log(currentColour);
-    currentColour = "white";
-    return currentColour;
-    // intro.setAttribute("class", "intro blue");
-    // colourBtn.setAttribute("class", "blue");
-    // closeBtn.setAttribute("class", "hidden blue");
-    // infoBtn.setAttribute("class", "hidden blue");
-   } else {
-    console.log(currentColour);
-    currentColour = "red";
-    return currentColour;
-    // intro.setAttribute("class", "intro white");
-    // colourBtn.setAttribute("class", "white");
-    // closeBtn.setAttribute("class", "hidden white");
-    // infoBtn.setAttribute("class", "hidden white");
-   }
-   // colourBtn.setAttribute("class", "white");
-   // closeBtn.setAttribute("class", "hidden white");
-   // infoBtn.setAttribute("class", "hidden white");
-
-
-  }
-  // intro.setAttribute("class", "intro " + changeColour());
- </script>
+ <script src="main-script.js"></script>
 </body>
 
 </html>
