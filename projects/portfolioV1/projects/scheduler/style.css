@@ -1,11 +1,12 @@
-body {
- margin: 0px;
- background-color: white;
-}
-
 .header ul{
  list-style: none; display:inline-flex;
 }
+
+.button {}
+
+.label {}
+
+.right {}
 
 .table-container {
  display: grid;
@@ -49,6 +50,10 @@ body {
  background-color:limegreen;
 }
 
+#table-body-time-bar {
+
+}
+
 .table-body-left {
  grid-column:2;
  text-align:right;
@@ -58,6 +63,10 @@ body {
  grid-column:3;
  padding: 0px 5px;
 }
+
+.timeSlot{}
+
+.activitySlot{}
 
 input {
  border-style: none;

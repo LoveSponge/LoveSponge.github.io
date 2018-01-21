@@ -2,52 +2,109 @@
 
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="./style.css">
  <title>Portfolio</title>
+ <link rel="stylesheet" href="mobile-style.css">
+ <link rel="stylesheet" href="main-style.css">
+ <link rel="stylesheet" href="tablet-style.css">
+ <style>
+ </style>
 </head>
 
-<body>
- <div class="root-container">
-  <div class="header-container">
-   <div>Home</div>
-   <div>About</div>
-   <div style="grid-column:6;">Color</div>
+<body onload="onloader()">
+ <div class="wrapper">
+  <div class="mobile-fab">
+   <span>
+    <p onclick="changeColour()">C</p>
+   </span>
   </div>
-  <div class="welcome">
-   <h1>Welcome to LoveSponge.github.io!</h1>
-   <h3>This is a small collection of a few different projects i've built over the years i've spent learning web design/programming.</h3>
+  <div class="header">
+   <p class="colour" onclick="changeColour()">Colours</p>
   </div>
-  <div class="projects-container">
-   <div class="project" style="grid-column:1; grid-row:1;">
-    <img src="./images/stars.png" alt="placeholder">
-    <div class="overlay">
-     <p>This was the first thing i ever learned in javaScript, how to add and remove little stars...</p>
-     <button onclick="goto('projects/stars/index.html')">GO</button>
+  <div class="intro">
+   <h1>Lovesponge.github.io</h1>
+   <h3>Welcome to my portfolio</h3>
+   <!-- <div class="card-actions">
+    <p>Github</p>
+    <p>Google</p>
+    <p>LinkedIn</p>
+    <p>Phone</p>
+    <p>Email</p>
+    <p>Share</p>
+    <p>Download CV</p>
+    <p>Made possible by Github pages</p>
+   </div> -->
+   <p class="instructions"></p>
+  </div>
+  <div class="projects">
+   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
+    <div class="card-title">
+     <p>Project President</p>
+    </div>
+    <div class="card-iframe">
+     <iframe src="./projects/barack/index.html" scrolling=""></iframe>
+    </div>
+    <div class="card-description">
+     <p>This was created as a showcase of my basic HTML, CSS ability for FreeCodeCamp.org</p>
+    </div>
+    <div class="card-actions">
+     <!-- <p>like</p> -->
+     <!-- <p>share</p> -->
+     <p class="view" onclick="view(this)">view</p>
     </div>
    </div>
-   <div class="project" style="grid-column:2; grid-row:1;">
-    <img src="./images/barack.png" alt="placeholder">
-    <div class="overlay">
-     <p>This is a small project i made for a learning web design website</p>
-     <button onclick="goto('projects/barack/index.html')">GO</button>
+   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
+    <div class="card-title">
+     <p>Project Scheduler</p>
+    </div>
+    <div class="card-iframe">
+     <iframe src="./projects/scheduler/index.html" scrolling=""></iframe>
+    </div>
+    <div class="card-description">
+     <p>My aim here was to create a SPA for personal use, with the objective of being able to see where i spend most of my time
+      in a day. Still a WIP.</p>
+    </div>
+    <div class="card-actions">
+     <!-- <p>like</p> -->
+     <!-- <p>share</p> -->
+     <p class="view" onclick="view(this)">view</p>
     </div>
    </div>
-   <div class="project" style="grid-column:3; grid-row:1;">
-    <img src="./images/scheduler.png" alt="placeholder">
-    <div class="overlay">
-     <p>This is just a small SPA that was designed to help me keep track of the time i spent on different activities</p>
-     <button onclick="goto('projects/scheduler/index.html')">GO</button>
+   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
+    <div class="card-title">
+     <p>Project Stars</p>
+    </div>
+    <div class="card-iframe">
+     <iframe src="./projects/stars/index.html" scrolling=""></iframe>
+    </div>
+    <div class="card-description">
+     <p>This was the first (notable) thing I ever learned to do in JavaScript! (The orignial didn't include all of the error
+      catching and input box.)</p>
+    </div>
+    <div class="card-actions">
+     <!-- <p>like</p> -->
+     <!-- <p>share</p> -->
+     <p class="view" onclick="view(this)">view</p>
     </div>
    </div>
-  </div>
-  <div class="footer-container">
-   <p>Download my CV
-    <a href="">here</a>
-   </p>
+   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
+    <div class="card-title">
+     <p>Project Portfolio (v1)</p>
+    </div>
+    <div class="card-iframe">
+     <iframe src="./projects/portfolioV1/index.html" scrolling=""></iframe>
+    </div>
+    <div class="card-description">
+     <p>This is the first version of the site you are looking at! (please open viewer)</p>
+    </div>
+    <div class="card-actions">
+     <!-- <p>like</p> -->
+     <!-- <p>share</p> -->
+     <p class="view" onclick="view(this)">view</p>
+    </div>
+   </div>
   </div>
  </div>
- <div class="indev">Responsive UI is in development at the moment! please view on a desktop!</div>
- <script type="text/javascript" src="script.js"></script>
+ <script src="main-script.js"></script>
 </body>
 
 </html>
