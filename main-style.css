@@ -1,28 +1,42 @@
+:root {
+ --header-colour-text: white;
+ --primary-colour-text: black;
+ --secondary-colour-text: black;
+ --accent-colour-text: black;
+
+ --header-colour: #616161;
+ --primary-colour: white;
+ --secondary-colour: white;
+ --accent-colour: #00E676;
+
+}
 
 @media (min-width: 768px) {
  :root {
   --viewer-wrapper-template-columns: 1fr 3fr;
   --viewer-project-card-grid: 1/3;
-  --main-height:91vh;
-  --main-height-mobile:99;
+  --main-height:95vh;
+  --main-height-mobile:100;
   --peek-grid: 1/20;
  }
 
  body {
   padding: 0px;
-  margin: 1vh 1vw;
+  margin: 0px;
  }
 
 .wrapper {
   display: grid;
   grid-template-rows: minmax(auto, auto);
   grid-template-columns: 3fr 1fr;
-  grid-gap: 2vh;
+  /* grid-gap: 2vh; */
   transition: .5s ease; /* SUPPORT FOR UPCOMING DOM FEATURES */
  }
 
  .mobile-fab {
   display: none;
+  background-color: var(--accent-colour);
+  color: var(--accent-colour-text);
  }
 
 .header {
@@ -31,23 +45,35 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column: 1/3;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-  padding: 1vh;
- }
-
- .close {
-  display: var(--hidden);
- }
- .info {
-  display: var(--hidden);
+  /* padding: 1vh; */
+  background-color: var(--header-colour);
+  color: var(--header-colour-text);
  }
 
  .header p {
   margin: 0px;
+  padding: 1vh 0px;
+  background-color: var(--accent-colour);
+  color: var(--accent-colour-text);
+  font-weight: bold;
+  text-align: center;
  }
 
  .intro {
   height: var(--main-height);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  background-color: var(--primary-colour);
+  color: var(--primary-colour-text);
+  text-align: center;
+ }
+
+ .intro .card-actions {
+  grid-template-columns: repeat(4, 1fr);
+ }
+
+ .intro p {
+  /* background-color: var(--accent-colour); */
+  /* color: var(--accent-colour-text); */
  }
 
  .projects {
@@ -69,6 +95,8 @@
   grid-template-rows: auto 1fr auto auto;
   grid-template-columns: 1fr;
   transition: .5s ease; /* SUPPORT FOR UPCOMING DOM FEATURES */
+  background-color: var(--main-colour);
+  color: var(--main-colour-text);
  }
 
  .project-card:hover {
@@ -78,6 +106,8 @@
  .card-title {
   padding: 5px 10px;
   font-weight: bold;
+  background-color: var(--header-colour);
+  color: var(--header-colour-text);
  }
 
  .card-iframe iframe {
@@ -88,15 +118,22 @@
 
  .card-description {
   padding: 5px 10px;
+  background-color: var(--secondary-colour);
+  color: var(--secondary-colour-text);
  }
 
  .card-actions {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  padding: 5px 0px;
   text-align: center;
   font-weight: bold;
+  background-color: var(--secondary-colour);
+ }
+
+ .card-actions p {
+  background-color: var(--accent-colour);
+  color: var(--accent-colour-text);
+  padding: 3px 0px;
  }
 }
