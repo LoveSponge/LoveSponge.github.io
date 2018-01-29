@@ -6,6 +6,16 @@
    margin: 0px;
   }
 
+  .no-move {
+   background-image: url("./images/mountains.jpg");
+   background-repeat: no-repeat;
+   background-size: 100vw 100vh;
+   position: fixed;
+   z-index: 0;
+   width: 100vw;
+   height: 100vh;
+  }
+
   .wrapper {
    display: grid;
    grid-template-rows: 100vh 100vh;
@@ -26,9 +36,7 @@
   }
 
   .top {
-   background-image: url("./images/mountains.jpg");
-   background-repeat: no-repeat;
-   background-size: 100vw 100vh;
+   z-index: 1;
    display: grid;
    grid-template-rows: 0.1fr 1fr 0.1fr;
    grid-template-columns: 0.1fr 1fr 0.1fr;
@@ -55,8 +63,8 @@
   }
 
   .bottom {
+   z-index: 1;
    display: grid;
-   background-color: antiquewhite;
    grid-template-rows: auto;
    grid-template-columns: 0.1fr 1fr 0.1fr;
   }
@@ -65,6 +73,7 @@
 
 <body>
  <div class="wrapper">
+  <div class="no-move"></div>
   <div class="top">
    <div class="header">
     <p>link</p>
