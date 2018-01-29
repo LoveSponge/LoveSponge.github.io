@@ -1,110 +1,86 @@
 <html>
 
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Portfolio</title>
- <link rel="stylesheet" href="mobile-style.css">
- <link rel="stylesheet" href="main-style.css">
- <link rel="stylesheet" href="tablet-style.css">
  <style>
+  body {
+   margin: 0px;
+  }
+
+  .wrapper {
+   display: grid;
+   grid-template-rows: 100vh 100vh;
+   grid-template-columns: 1fr;
+
+  }
+
+  .content {
+   grid-column: 2;
+   background-color: snow;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+   transition: 0.5s ease;
+
+  }
+
+  .content:hover {
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  .top {
+   background-image: url("./images/mountains.jpg");
+   background-repeat: no-repeat;
+   background-size: 100vw 100vh;
+   display: grid;
+   grid-template-rows: 0.1fr 1fr 0.1fr;
+   grid-template-columns: 0.1fr 1fr 0.1fr;
+  }
+
+  .header {
+   grid-column: 2;
+   display: grid;
+   grid-template-rows: auto;
+   grid-template-columns: repeat(3, 0.1fr);
+  }
+
+  .welcome {
+   grid-row: 2;
+   grid-column: 2;
+  }
+
+  .arrow {
+   grid-row: 3;
+   grid-column: 2;
+   text-align: center;
+   color: white;
+   font-size: 50px;
+  }
+
+  .bottom {
+   display: grid;
+   background-color: antiquewhite;
+   grid-template-rows: auto;
+   grid-template-columns: 0.1fr 1fr 0.1fr;
+  }
  </style>
 </head>
 
-<body onload="onloader()">
+<body>
  <div class="wrapper">
-  <div class="mobile-fab">
-   <span>
-    <p onclick="changeColour()">C</p>
-   </span>
+  <div class="top">
+   <div class="header">
+    <p>link</p>
+    <p>link</p>
+    <p>link</p>
+   </div>
+   <div class="welcome">
+    <h1>TITLE.</h1>
+    <h3>subtitle</h3>
+   </div>
+   <div class="arrow">&DoubleDownArrow;</div>
   </div>
-  <div class="header">
-   <p class="colour" onclick="changeColour()">Colours</p>
-  </div>
-  <div class="intro">
-   <h1>Lovesponge.github.io</h1>
-   <h3>Welcome to my portfolio</h3>
-   <!-- <div class="card-actions">
-    <p>Github</p>
-    <p>Google</p>
-    <p>LinkedIn</p>
-    <p>Phone</p>
-    <p>Email</p>
-    <p>Share</p>
-    <p>Download CV</p>
-    <p>Made possible by Github pages</p>
-   </div> -->
-   <p class="instructions"></p>
-  </div>
-  <div class="projects">
-   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
-    <div class="card-title">
-     <p>Project President</p>
-    </div>
-    <div class="card-iframe">
-     <iframe src="./projects/barack/index.html" scrolling=""></iframe>
-    </div>
-    <div class="card-description">
-     <p>This was created as a showcase of my basic HTML, CSS ability for FreeCodeCamp.org</p>
-    </div>
-    <div class="card-actions">
-     <!-- <p>like</p> -->
-     <!-- <p>share</p> -->
-     <p class="view" onclick="view(this)">view</p>
-    </div>
-   </div>
-   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
-    <div class="card-title">
-     <p>Project Scheduler</p>
-    </div>
-    <div class="card-iframe">
-     <iframe src="./projects/scheduler/index.html" scrolling=""></iframe>
-    </div>
-    <div class="card-description">
-     <p>My aim here was to create a SPA for personal use, with the objective of being able to see where i spend most of my time
-      in a day. Still a WIP.</p>
-    </div>
-    <div class="card-actions">
-     <!-- <p>like</p> -->
-     <!-- <p>share</p> -->
-     <p class="view" onclick="view(this)">view</p>
-    </div>
-   </div>
-   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
-    <div class="card-title">
-     <p>Project Stars</p>
-    </div>
-    <div class="card-iframe">
-     <iframe src="./projects/stars/index.html" scrolling=""></iframe>
-    </div>
-    <div class="card-description">
-     <p>This was the first (notable) thing I ever learned to do in JavaScript! (The orignial didn't include all of the error
-      catching and input box.)</p>
-    </div>
-    <div class="card-actions">
-     <!-- <p>like</p> -->
-     <!-- <p>share</p> -->
-     <p class="view" onclick="view(this)">view</p>
-    </div>
-   </div>
-   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
-    <div class="card-title">
-     <p>Project Portfolio (v1)</p>
-    </div>
-    <div class="card-iframe">
-     <iframe src="./projects/portfolioV1/index.html" scrolling=""></iframe>
-    </div>
-    <div class="card-description">
-     <p>This is the first version of the site you are looking at! (please open viewer)</p>
-    </div>
-    <div class="card-actions">
-     <!-- <p>like</p> -->
-     <!-- <p>share</p> -->
-     <p class="view" onclick="view(this)">view</p>
-    </div>
-   </div>
+  <div class="bottom">
+   <div class="content"></div>
   </div>
  </div>
- <script src="main-script.js"></script>
 </body>
 
 </html>
