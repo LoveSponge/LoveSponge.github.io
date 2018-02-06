@@ -2,109 +2,92 @@
 
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Portfolio</title>
+ <title>Lovesponge.github.io</title>
  <link rel="stylesheet" href="mobile-style.css">
  <link rel="stylesheet" href="main-style.css">
- <link rel="stylesheet" href="tablet-style.css">
- <style>
- </style>
 </head>
 
-<body onload="onloader()">
+<body onload="onload()">
  <div class="wrapper">
-  <div class="mobile-fab">
-   <span>
-    <p onclick="changeColour()">C</p>
-   </span>
-  </div>
-  <div class="header">
-   <p class="colour" onclick="changeColour()">Colours</p>
-  </div>
-  <div class="intro">
-   <h1>Lovesponge.github.io</h1>
-   <h3>Welcome to my portfolio</h3>
-   <!-- <div class="card-actions">
-    <p>Github</p>
-    <p>Google</p>
-    <p>LinkedIn</p>
-    <p>Phone</p>
-    <p>Email</p>
-    <p>Share</p>
-    <p>Download CV</p>
-    <p>Made possible by Github pages</p>
-   </div> -->
-   <p class="instructions"></p>
-  </div>
-  <div class="projects">
-   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
-    <div class="card-title">
-     <p>Project President</p>
-    </div>
-    <div class="card-iframe">
-     <iframe src="./projects/barack/index.html" scrolling=""></iframe>
-    </div>
-    <div class="card-description">
-     <p>This was created as a showcase of my basic HTML, CSS ability for FreeCodeCamp.org</p>
-    </div>
-    <div class="card-actions">
-     <!-- <p>like</p> -->
-     <!-- <p>share</p> -->
-     <p class="view" onclick="view(this)">view</p>
-    </div>
+  <div class="no-move"></div>
+  <div class="top">
+   <div class="header">
+    <!-- <p>link</p>
+    <p>link</p>
+    <p>link</p> -->
    </div>
-   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
-    <div class="card-title">
-     <p>Project Scheduler</p>
-    </div>
-    <div class="card-iframe">
-     <iframe src="./projects/scheduler/index.html" scrolling=""></iframe>
-    </div>
-    <div class="card-description">
-     <p>My aim here was to create a SPA for personal use, with the objective of being able to see where i spend most of my time
-      in a day. Still a WIP.</p>
-    </div>
-    <div class="card-actions">
-     <!-- <p>like</p> -->
-     <!-- <p>share</p> -->
-     <p class="view" onclick="view(this)">view</p>
-    </div>
+   <div class="welcome">
+    <h1>Lovesponge.github.io</h1>
+    <h3>This is a showcase of some of my projects, Scroll down to see them!</h3>
    </div>
-   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
-    <div class="card-title">
-     <p>Project Stars</p>
+   <div class="arrow">&DoubleDownArrow;</div>
+  </div>
+  <div class="bottom">
+   <div class="content">
+    <div class="card">
+     <div class="card-header">Barack facts</div>
+     <div class="card-iframe">
+      <iframe src="./projects/barack/index.html"></iframe>
+     </div>
+     <div class="card-info">This site was created as a test of my web design abilities for freecodecamp.org</div>
+     <div class="card-actions">
+      <p onclick="foo(this)">View</p>
+     </div>
     </div>
-    <div class="card-iframe">
-     <iframe src="./projects/stars/index.html" scrolling=""></iframe>
+    <div class="card">
+     <div class="card-header">Portfolio V1</div>
+     <div class="card-iframe">
+      <iframe src="./projects/portfolioV1/index.html"></iframe>
+     </div>
+     <div class="card-info">This was the first version of this site! (note: none of the links are working for it)</div>
+     <div class="card-actions">
+      <p onclick="foo(this)">View</p>
+     </div>
     </div>
-    <div class="card-description">
-     <p>This was the first (notable) thing I ever learned to do in JavaScript! (The orignial didn't include all of the error
-      catching and input box.)</p>
+    <div class="card">
+     <div class="card-header">Portfolio V2</div>
+     <div class="card-iframe">
+      <iframe src="./projects/portfolioV2/index.html"></iframe>
+     </div>
+     <div class="card-info">This was the second version of my portfolio, it works now! (note: may be buggy on some devices)</div>
+     <div class="card-actions">
+      <p onclick="foo(this)">View</p>
+     </div>
     </div>
-    <div class="card-actions">
-     <!-- <p>like</p> -->
-     <!-- <p>share</p> -->
-     <p class="view" onclick="view(this)">view</p>
+    <div class="card">
+     <div class="card-header">Scheduler</div>
+     <div class="card-iframe">
+      <iframe src="./projects/scheduler/index.html"></iframe>
+     </div>
+     <div class="card-info">I wanted a way to track what I spent my time doing in the day. Still a WIP</div>
+     <div class="card-actions">
+      <p onclick="foo(this)">View</p>
+     </div>
     </div>
-   </div>
-   <div class="project-card" onmouseover="peek(this)" onmouseout="offPeek(this)">
-    <div class="card-title">
-     <p>Project Portfolio (v1)</p>
+    <div class="card">
+     <div class="card-header">Stars</div>
+     <div class="card-iframe">
+      <iframe src="./projects/stars/index.html"></iframe>
+     </div>
+     <div class="card-info">This was the first thing I ever learned to do in javascript! (the original was solely console based)</div>
+     <div class="card-actions">
+      <p onclick="foo(this)">View</p>
+     </div>
     </div>
-    <div class="card-iframe">
-     <iframe src="./projects/portfolioV1/index.html" scrolling=""></iframe>
-    </div>
-    <div class="card-description">
-     <p>This is the first version of the site you are looking at! (please open viewer)</p>
-    </div>
-    <div class="card-actions">
-     <!-- <p>like</p> -->
-     <!-- <p>share</p> -->
-     <p class="view" onclick="view(this)">view</p>
+    <div class="card">
+     <div class="card-header">More on the way!</div>
+     <div class="card-iframe">
+      <!-- <iframe src="./projects/stars/index.html"></iframe> -->
+     </div>
+     <div class="card-info">I am always working on new design templates and new ideas!</div>
+     <div class="card-actions">
+      <p onclick="foo(this)">Blog</p>
+     </div>
     </div>
    </div>
   </div>
  </div>
- <script src="main-script.js"></script>
 </body>
+<script src="main-script.js"></script>
 
 </html>
