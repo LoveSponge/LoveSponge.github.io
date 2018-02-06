@@ -8,6 +8,7 @@ function onload() {
 
 function foo(target) {
  console.log();
+ let body = document.querySelector('body');
  let content = document.querySelector('.content');
  let cards = document.querySelectorAll('.card');
  let $thisIframe = target.parentNode.parentNode.querySelector('.card-iframe').querySelector('iframe');
@@ -17,6 +18,7 @@ function foo(target) {
    if (card === target.parentNode.parentNode) {
     content.setAttribute('style', 'grid-template-rows: 1fr; grid-template-columns: 1fr;');
     target.innerText = 'Close';
+    window.scrollTo(0, body.scrollHeight);
     document.body.setAttribute('style', 'overflow-y: hidden;');
     $thisIframe.setAttribute('scrolling', 'yes');
    } else {
@@ -29,6 +31,7 @@ function foo(target) {
   content.setAttribute('style', '');
   document.body.setAttribute('style', '');
   $thisIframe.setAttribute('scrolling', 'no');
+  window.scrollTo(0, body.scrollHeight);
   for (let card of cards) {
    card.setAttribute('style', '');
   }
