@@ -1,4 +1,4 @@
-@media(min-width:768px) {
+@media (min-width: 768px)  {
  body {
   margin: 0px;
  }
@@ -20,23 +20,6 @@
 
  }
 
- .content {
-  grid-column: 2;
-  background-color: snow;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transition: 0.5s ease;
-  height: 98.9%;
-  border-radius: 0.5%;
-  margin-top: -1%;
-  padding-top: 1%;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
- }
-
- .content:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
- }
 
  .top {
   z-index: 1;
@@ -70,6 +53,24 @@
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 0.1fr 1fr 0.1fr;
+ }
+
+ .content {
+  grid-column: 2;
+  background-color: snow;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.5s ease;
+  height: 98.9%;
+  border-radius: 0.5%;
+  margin-top: -1%;
+  padding-top: 1%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+ }
+
+ .content:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
  }
 
  .card {
