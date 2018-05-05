@@ -1,5 +1,9 @@
-#laverna #markdown #textEditor #noteTaking
-
+---
+layout: post
+title:  "Laverna Review"
+date:   2018-05-05 12:00:00 -0500
+categories: laverna markdown textEditor noteTaking
+---
 [Laverna](www.laverna.com) is a FOSS markdown note taking editor who's USP is that it includes passphrase-based encryption with upto 256 bit size and 128 key length, with even a customisable 'strengthen factor' that defaults to 10000.
 Laverna has [Dropbox](www.dropbox.com) support built in and has an android app on the way, currently it supports all desktops with it's [Electron](www.electron.com) architecture, which means that any updates should hit all platforms at the same time, no favoritism.
 It's **live preview** feature is extremely appealing as there is no other note-taking app that does this out of the box in the way Laverna does, key-by-key updating in real time, **no delay**.
