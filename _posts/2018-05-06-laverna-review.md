@@ -47,6 +47,4 @@ Laverna includes DropBox support, which I realise isn't relevant to allot of you
 Laverna did crash on me while shuffling through the settings. Reminding me the app is still in development...
 
 ___
-***Fin***
-
-___
+# *Fin*

@@ -73,4 +73,4 @@ While my search continues, I will be posting reviews on all the apps that get as
 Remember all reviews share *opinions*, which means that they are biased, while I try to remain un-biased, there is no such thing as an un-biased review. Everything I list as a feature is a fact, which means you can trust that it has/ doesn't have it. All the text in between is my opinion and all opinions are subjective. I try to remain neutral by only including pros and cons which I think are relevant to you, the reader. If you made it this far, well done, this review is now finished
 
 ___
-# Fin
+# *Fin*
