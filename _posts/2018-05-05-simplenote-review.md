@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "SimpleNote Review"
+date:   2018-05-05 20:17:30 -0500
+categories: simplenote markdown textEditor noteTaking
+---
 [SimpleNote](www.simplenote.com) is a markdown-based (or plain text if you want,) text editing suite that syncs across all your devices. (no matter however many you have) *looking at you evernote.* It is built and maintained by the team that brought us [WordPress](www.wordpress.com).
 It's promise is to deliver the most basic features (as well as a couple that make it unique) that allow you to get from the main screen to the end of your next note, hassle free and with as few taps/clicks as possible.
 I wrote this entire review on it (both desktop and mobile versions) so as to be sure of which features it has, as well as what it doesn't. Enjoy!
