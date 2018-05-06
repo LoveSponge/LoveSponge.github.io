@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to LoveSponge.github.io"
 date:   2018-05-04 00:00:00 -0500
 categories: welcome
 ---
