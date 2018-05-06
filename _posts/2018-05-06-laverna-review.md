@@ -21,7 +21,7 @@ It's **live preview** feature is extremely appealing as there is no other note-t
 - Dropbox support *Files are saved locally in absense of dropbox or internet*
 
 ---
-## cons
+## Cons
 - No Android app, **yet** (Pre releases available on github!)
 - No theming *built in*
 - Non-adjustable panel sizing
